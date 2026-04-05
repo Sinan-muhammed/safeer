@@ -1,0 +1,588 @@
+﻿body.mainland-page {
+  background: var(--color-white);
+}
+
+.mainland-page .site-nav__dropdown-toggle.is-current {
+  color: var(--navy);
+}
+
+.mainland-page .site-nav__menu-link.is-current {
+  background: rgba(var(--color-primary-800-rgb), 0.06);
+  color: var(--navy);
+}
+
+.mainland-main {
+  padding-bottom: 88px;
+}
+
+.mainland-main > section {
+  width: min(var(--content-max), calc(100% - var(--page-gutter)));
+  margin: 34px auto 0;
+}
+
+.mainland-tag {
+  margin: 0 0 12px;
+  color: var(--color-secondary-600);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.mainland-tag--light {
+  color: rgba(var(--color-white-rgb), 0.82);
+}
+
+.mainland-tag--teal {
+  color: rgba(var(--color-secondary-400-rgb), 0.94);
+}
+
+.mainland-head {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.mainland-head--center {
+  justify-items: center;
+  text-align: center;
+}
+
+.mainland-head h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.85rem, 2.8vw, 2.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.mainland-head__copy {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.mainland-head__copy--light {
+  color: rgba(var(--color-white-rgb), 0.74);
+}
+
+.mainland-hero {
+  display: flex;
+  align-items: flex-end;
+  min-height: 520px;
+  padding: clamp(30px, 5vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(90deg, rgba(var(--shadow-rgb), 0.86) 0%, rgba(var(--shadow-rgb), 0.62) 38%, rgba(var(--shadow-rgb), 0.22) 100%),
+    url("assets/Hero.jpg") center / cover no-repeat;
+  box-shadow: 0 24px 56px rgba(var(--shadow-rgb), 0.12);
+}
+
+.mainland-hero__content {
+  max-width: 760px;
+}
+
+.mainland-hero h1 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.5rem, 4.4vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.mainland-hero__copy {
+  margin: 18px 0 0;
+  max-width: 62ch;
+  color: rgba(var(--color-white-rgb), 0.84);
+  font-size: 1.04rem;
+  line-height: 1.85;
+}
+
+.mainland-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.mainland-hero__ghost {
+  color: var(--color-white);
+  background: rgba(var(--color-white-rgb), 0.08);
+  border-color: rgba(var(--color-white-rgb), 0.24);
+}
+
+.mainland-hero__ghost:hover,
+.mainland-hero__ghost:focus-visible {
+  background: rgba(var(--color-white-rgb), 0.14);
+  border-color: rgba(var(--color-white-rgb), 0.34);
+}
+
+.mainland-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.mainland-intro__content,
+.mainland-intro__image-shell,
+.mainland-intro__callout,
+.license-card,
+.mainland-cta__shell {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 42px rgba(var(--shadow-soft-rgb), 0.06);
+}
+
+.mainland-intro__content {
+  padding: clamp(28px, 3vw, 44px);
+  background:
+    linear-gradient(180deg, rgba(var(--color-white-rgb), 1), rgba(var(--color-white-rgb), 0.98)),
+    var(--color-white);
+}
+
+.mainland-intro__content h2 {
+  margin: 0;
+  max-width: 14ch;
+  color: var(--navy);
+  font-size: clamp(1.9rem, 2.9vw, 2.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.mainland-intro__content p {
+  margin: 18px 0 0;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.mainland-intro__points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.mainland-mini-card {
+  min-height: 148px;
+  padding: 18px;
+  border: 1px solid rgba(var(--color-primary-800-rgb), 0.08);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: 0 10px 24px rgba(var(--shadow-rgb), 0.04);
+}
+
+.mainland-mini-card__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: rgba(var(--color-primary-800-rgb), 0.06);
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.mainland-mini-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.mainland-mini-card p {
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.mainland-intro__visual {
+  display: grid;
+  gap: 16px;
+}
+
+.mainland-intro__image-shell {
+  min-height: 420px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(var(--color-white-rgb), 0), rgba(var(--color-primary-800-rgb), 0.06)),
+    var(--color-neutral-200);
+}
+
+.mainland-intro__image-shell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainland-intro__callout {
+  padding: 22px;
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-700) 100%);
+  color: var(--color-white);
+}
+
+.mainland-intro__callout-label {
+  margin: 0;
+  color: rgba(var(--color-secondary-400-rgb), 0.92);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.mainland-intro__callout strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 1.18rem;
+  line-height: 1.55;
+}
+
+.mainland-license-types {
+  padding: 6px 0 0;
+}
+
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.license-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 26px 24px;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-neutral-50) 100%);
+}
+
+.license-card--featured {
+  transform: translateY(-10px);
+  background:
+    radial-gradient(circle at top right, rgba(var(--color-secondary-400-rgb), 0.16), transparent 26%),
+    linear-gradient(180deg, var(--color-primary-800) 0%, var(--color-primary-700) 100%);
+  box-shadow: 0 26px 50px rgba(var(--shadow-rgb), 0.16);
+}
+
+.license-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  line-height: 1.18;
+}
+
+.license-card--featured h3,
+.license-card--featured .license-card__eyebrow,
+.license-card--featured .license-card__price,
+.license-card--featured .license-card__price span,
+.license-card--featured .license-card__list li {
+  color: var(--color-white);
+}
+
+.license-card__eyebrow {
+  margin: 14px 0 0;
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.license-card__price {
+  margin: 18px 0 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(var(--color-primary-800-rgb), 0.08);
+  color: var(--navy);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.license-card--featured .license-card__price {
+  border-bottom-color: rgba(var(--color-white-rgb), 0.16);
+}
+
+.license-card__price span {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--color-text-muted);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.license-card__list {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.license-card__list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text);
+  line-height: 1.72;
+}
+
+.license-card__list li::before {
+  content: "âœ“";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-secondary-700);
+  font-weight: 800;
+}
+
+.license-card--featured .license-card__list li::before {
+  color: var(--teal);
+}
+
+.license-card__button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.license-card__button--featured {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  margin-top: auto;
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--navy);
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.license-card__button--featured:hover,
+.license-card__button--featured:focus-visible {
+  background: rgba(var(--color-white-rgb), 0.92);
+}
+
+.license-card__list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid var(--color-secondary-700);
+  border-bottom: 2px solid var(--color-secondary-700);
+  transform: rotate(-45deg);
+}
+
+.license-card--featured .license-card__list li::before {
+  border-color: var(--teal);
+}
+
+.license-card__button--featured {
+  width: 100%;
+}
+
+.mainland-benefits__shell {
+  padding: 32px 28px 28px;
+  border: 1px solid rgba(var(--color-primary-800-rgb), 0.12);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(var(--color-secondary-400-rgb), 0.14), transparent 22%),
+    linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-700) 100%);
+  box-shadow: 0 26px 58px rgba(var(--shadow-rgb), 0.14);
+}
+
+.mainland-benefits__shell h2 {
+  color: var(--color-white);
+}
+
+.mainland-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.mainland-benefit-card {
+  min-height: 220px;
+  padding: 24px;
+  border: 1px solid rgba(var(--color-white-rgb), 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(var(--color-white-rgb), 0.06);
+  box-shadow: inset 0 1px 0 rgba(var(--color-white-rgb), 0.04);
+}
+
+.mainland-benefit-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: rgba(var(--color-secondary-400-rgb), 0.14);
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.mainland-benefit-card h3 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1.16rem;
+  line-height: 1.42;
+}
+
+.mainland-benefit-card p {
+  margin: 12px 0 0;
+  color: rgba(var(--color-white-rgb), 0.74);
+  line-height: 1.72;
+}
+
+.mainland-cta__shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(var(--color-secondary-400-rgb), 0.14), transparent 22%),
+    linear-gradient(180deg, var(--color-white) 0%, var(--color-neutral-100) 100%);
+}
+
+.mainland-cta__content h2 {
+  margin: 0;
+  max-width: 15ch;
+  color: var(--navy);
+  font-size: clamp(1.85rem, 2.8vw, 2.45rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.mainland-cta__content p {
+  margin: 16px 0 0;
+  max-width: 62ch;
+  color: var(--color-text-muted);
+  line-height: 1.82;
+}
+
+.mainland-cta__actions {
+  display: grid;
+  gap: 12px;
+  min-width: 250px;
+}
+
+@media (max-width: 1180px) {
+  .mainland-intro__grid,
+  .mainland-cta__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .mainland-intro__content h2,
+  .mainland-cta__content h2 {
+    max-width: none;
+  }
+
+  .license-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .license-card--featured {
+    transform: none;
+  }
+
+  .mainland-benefits__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .mainland-main {
+    padding-bottom: 34px;
+  }
+
+  .mainland-hero {
+    min-height: 430px;
+    align-items: end;
+    padding: 26px 20px;
+  }
+
+  .mainland-intro__content,
+  .license-card,
+  .mainland-benefits__shell,
+  .mainland-benefit-card,
+  .mainland-cta__shell,
+  .mainland-intro__callout,
+  .mainland-intro__image-shell,
+  .mainland-mini-card {
+    border-radius: 0;
+  }
+
+  .mainland-intro__points {
+    grid-template-columns: 1fr;
+  }
+
+  .mainland-intro__image-shell {
+    min-height: 320px;
+  }
+
+  .mainland-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainland-benefits__shell {
+    padding: 24px 20px;
+  }
+
+  .mainland-cta__actions {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainland-main > section {
+    margin-top: 22px;
+  }
+
+  .mainland-hero {
+    min-height: 360px;
+    padding: 20px 16px;
+  }
+
+  .mainland-hero h1 {
+    font-size: clamp(2.1rem, 8.8vw, 3rem);
+  }
+
+  .mainland-hero__copy {
+    font-size: 0.98rem;
+  }
+
+  .mainland-head h2,
+  .mainland-intro__content h2,
+  .mainland-cta__content h2 {
+    font-size: clamp(1.72rem, 7.6vw, 2.2rem);
+  }
+
+  .mainland-intro__content,
+  .license-card,
+  .mainland-benefits__shell,
+  .mainland-cta__shell {
+    padding: 20px 18px;
+  }
+
+  .mainland-intro__image-shell {
+    min-height: 280px;
+  }
+
+  .mainland-intro__callout {
+    padding: 18px;
+  }
+
+  .license-card__price {
+    font-size: 2.6rem;
+  }
+}
+

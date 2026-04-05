@@ -1,0 +1,813 @@
+/* ===========================
+   EJARI SERVICES PAGE STYLES
+   =========================== */
+
+:root {
+  --color-primary-dark: #1a3a52;
+  --color-primary-light: #2d5f8d;
+  --color-secondary-teal: #1ea7b5;
+  --color-secondary-light: #3dbbc9;
+  --color-accent-gold: #d4a574;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-bg-light: #f8f9fa;
+  --navy: #1a3a52;
+  --spacing-unit: 4px;
+}
+
+/* Hero Banner Section */
+.ejari-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  padding: clamp(60px, 12vw, 100px) 20px;
+  text-align: center;
+  position: relative;
+}
+
+.ejari-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ejari-banner h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.ejari-banner p {
+  margin: 0 0 32px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ejari Overview Section */
+.ejari-overview {
+  margin-top: 48px;
+  padding: 0 20px;
+}
+
+.overview-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.overview-content {
+  text-align: left;
+}
+
+.overview-content h2 {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.overview-content p {
+  margin: 0 0 20px;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 70ch;
+}
+
+.overview-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Services Grid Section */
+.ejari-services {
+  margin-top: 64px;
+  padding: 0 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-header h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.services-header p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 28px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-secondary-light) 100%);
+  opacity: 0;
+  transition: left 0.3s ease, opacity 0.3s ease;
+  z-index: -1;
+}
+
+.service-box:hover {
+  border-color: var(--color-accent-gold);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(58, 119, 153, 0.15);
+}
+
+.service-box:hover::before {
+  left: 0;
+  opacity: 0.08;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.service-box h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.service-box p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Ejari Benefits Section */
+.ejari-benefits {
+  margin-top: 64px;
+  padding: 0 20px;
+}
+
+.ejari-benefits h2 {
+  text-align: center;
+  margin: 0 0 48px;
+  color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 20px;
+}
+
+.benefit-item .checkmark {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-secondary-light) 100%);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.benefit-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.benefit-item p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.ejari-why-us {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  margin-top: 64px;
+  padding: 64px 20px;
+  position: relative;
+}
+
+.ejari-why-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.why-us-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-us-wrapper h2 {
+  margin: 0 0 48px;
+  text-align: center;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.reason-card {
+  text-align: center;
+}
+
+.reason-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-secondary-light) 100%);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+
+.reason-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.reason-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* FAQ Section */
+.ejari-faq {
+  margin-top: 64px;
+  padding: 0 20px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-container h2 {
+  margin: 0 0 40px;
+  text-align: center;
+  color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-item[open] {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 8px 24px rgba(58, 119, 153, 0.1);
+}
+
+.faq-item summary {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  list-style: none;
+}
+
+.faq-item summary:hover {
+  background-color: var(--color-bg-light);
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-left: 16px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 20px 20px;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-top: 1px solid #e8e8e8;
+}
+
+/* CTA Section */
+.ejari-cta {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  margin-top: 64px;
+  padding: 64px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.ejari-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ejari-cta h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  position: relative;
+  z-index: 1;
+}
+
+.ejari-cta p {
+  margin: 0 0 32px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.btn--cta-primary {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .ejari-why-us {
+    padding: 48px 20px;
+  }
+
+  .why-us-wrapper h2 {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ejari-banner {
+    padding: 50px 20px;
+  }
+
+  .ejari-banner h1 {
+    margin-bottom: 16px;
+  }
+
+  .ejari-banner p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .banner-actions {
+    gap: 12px;
+  }
+
+  .ejari-overview {
+    margin-top: 36px;
+    padding: 0 16px;
+  }
+
+  .overview-content h2 {
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+
+  .overview-content p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .ejari-services {
+    margin-top: 48px;
+    padding: 0 16px;
+  }
+
+  .services-header {
+    margin-bottom: 32px;
+  }
+
+  .services-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .services-header p {
+    font-size: 0.95rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-box {
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .service-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .ejari-benefits {
+    margin-top: 48px;
+    padding: 0 16px;
+  }
+
+  .ejari-benefits h2 {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+
+  .benefits-list {
+    gap: 20px;
+  }
+
+  .benefit-item .checkmark {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .benefit-item h3 {
+    font-size: 1rem;
+  }
+
+  .ejari-why-us {
+    margin-top: 48px;
+    padding: 40px 16px;
+  }
+
+  .why-us-wrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ejari-faq {
+    margin-top: 48px;
+    padding: 0 16px;
+  }
+
+  .faq-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  .faq-item summary {
+    padding: 16px;
+  }
+
+  .faq-item p {
+    padding: 0 16px 16px;
+  }
+
+  .ejari-cta {
+    margin-top: 48px;
+    padding: 40px 16px;
+  }
+
+  .ejari-cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .ejari-cta p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ejari-banner {
+    padding: 40px 16px;
+  }
+
+  .ejari-banner h1 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .ejari-banner p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .banner-actions {
+    gap: 10px;
+  }
+
+  .banner-actions a {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+
+  .ejari-overview {
+    margin-top: 28px;
+    padding: 0 16px;
+  }
+
+  .overview-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .overview-content p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .ejari-services {
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+
+  .services-header {
+    margin-bottom: 24px;
+  }
+
+  .services-header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .services-header p {
+    font-size: 0.85rem;
+  }
+
+  .services-grid {
+    gap: 16px;
+  }
+
+  .service-box {
+    padding: 16px;
+    min-height: auto;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .service-box h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .service-box p {
+    font-size: 0.85rem;
+  }
+
+  .ejari-benefits {
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+
+  .ejari-benefits h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .benefits-list {
+    gap: 16px;
+  }
+
+  .benefit-item {
+    gap: 16px;
+  }
+
+  .benefit-item .checkmark {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .benefit-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .benefit-item p {
+    font-size: 0.8rem;
+  }
+
+  .ejari-why-us {
+    margin-top: 32px;
+    padding: 32px 16px;
+  }
+
+  .why-us-wrapper h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .reasons-grid {
+    gap: 12px;
+  }
+
+  .reason-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .reason-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .reason-card p {
+    font-size: 0.8rem;
+  }
+
+  .ejari-faq {
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+
+  .faq-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .faq-list {
+    gap: 12px;
+  }
+
+  .faq-item summary {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .faq-item summary::after {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+
+  .faq-item p {
+    padding: 0 12px 12px;
+    font-size: 0.85rem;
+  }
+
+  .ejari-cta {
+    margin-top: 32px;
+    padding: 32px 16px;
+  }
+
+  .ejari-cta h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .ejari-cta p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+}
